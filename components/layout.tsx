@@ -27,22 +27,30 @@ const Layout: FC<LayoutProps> = ({ children, home }) => (
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
 
-    <header>
+    <header className="flex flex-col items-center">
       {home ? (
         <>
-          <img src="/icon-192x192.png" alt={name} />
-          <h1>{name}</h1>
+          <img
+            src="/icon-192x192.png"
+            alt={name}
+            className="w-32 h-32 rounded-full"
+          />
+          <h1 className="text-4xl font-extrabold my-4">{name}</h1>
         </>
       ) : (
         <>
           <Link href="/">
             <a>
-              <img src="/icon-192x192.png" alt={name} />
+              <img
+                src="/icon-192x192.png"
+                alt={name}
+                className="w-24 h-24 rounded-full"
+              />
             </a>
           </Link>
-          <h2>
+          <h2 className="my-4">
             <Link href="/">
-              <a>{name}</a>
+              <a className="text-2xl font-bold text-current">{name}</a>
             </Link>
           </h2>
         </>
@@ -52,7 +60,7 @@ const Layout: FC<LayoutProps> = ({ children, home }) => (
     <main>{children}</main>
 
     {!home && (
-      <div>
+      <div className="mt-12">
         <Link href="/">
           <a>← Back to home</a>
         </Link>
