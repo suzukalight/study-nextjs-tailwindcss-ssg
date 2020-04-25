@@ -1,4 +1,3 @@
-
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;
@@ -26,12 +25,6 @@ img {
   display: block;
 }
 
-/* purgecss start ignore */
-article p {
-  margin: 1em 0;
-}
-/* purgecss end ignore */
-
 article ul {
   display: block;
   list-style-type: disc;
@@ -43,3 +36,9 @@ article li {
   display: list-item;
   text-align: match-parent;
 }
+
+/* purgecss start ignore */
+article p {
+  margin: 1em 0;
+}
+/* purgecss end ignore */

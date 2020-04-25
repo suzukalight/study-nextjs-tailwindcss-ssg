@@ -3,8 +3,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { GetStaticProps } from "next";
 
-import Layout, { siteTitle } from "../components/layout";
-import Date from "../components/date";
+import Layout, { siteTitle } from "../components/Layout";
+import Date from "../components/Date";
 
 import { getSortedPostsData } from "../lib/posts";
 
@@ -15,11 +15,7 @@ export const getStaticProps: GetStaticProps = async () => ({
 });
 
 type HomeProps = {
-  allPostsData: {
-    date: string;
-    title: string;
-    id: string;
-  }[];
+  allPostsData: PostData[];
 };
 
 const Home: FC<HomeProps> = ({ allPostsData }) => (
@@ -28,7 +24,6 @@ const Home: FC<HomeProps> = ({ allPostsData }) => (
       <title>{siteTitle}</title>
     </Head>
 
-    <section className="text-xl">…</section>
     <section className="text-xl pt-1">
       <h2 className="text-2xl font-bold my-4">Blog</h2>
 

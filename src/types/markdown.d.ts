@@ -1,3 +1,6 @@
-type MatterData = matter.GrayMatterFile<string> & {
-  id: string;
+type PostData = matter.GrayMatterFile<string> & {
+  date: string;
+  title: string;
+  id?: string;
+  contentHtml?: string;
 };
