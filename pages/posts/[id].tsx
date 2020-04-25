@@ -4,7 +4,6 @@ import Head from "next/head";
 
 import Layout from "../../components/layout";
 import Date from "../../components/date";
-import utilStyles from "../../styles/utils.module.css";
 
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
@@ -33,8 +32,8 @@ const Post: FC<PostProps> = ({ postData }) => (
     </Head>
 
     <article>
-      <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-      <div className={utilStyles.lightText}>
+      <h1>{postData.title}</h1>
+      <div>
         <Date dateString={postData.date} />
       </div>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
