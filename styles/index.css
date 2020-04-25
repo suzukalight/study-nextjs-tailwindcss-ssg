@@ -8,10 +8,6 @@
   box-sizing: border-box;
 }
 
-body {
-  @apply p-12;
-}
-
 a {
   color: #0070f3;
   text-decoration: none;

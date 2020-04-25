@@ -10,7 +10,7 @@ type LayoutProps = {
 };
 
 const Layout: FC<LayoutProps> = ({ children, home }) => (
-  <div>
+  <div className="px-4 mt-12 mb-24 mx-auto max-w-xl">
     <Head>
       <link rel="icon" href="/favicon.ico" />
       <meta
