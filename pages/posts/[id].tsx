@@ -32,8 +32,8 @@ const Post: FC<PostProps> = ({ postData }) => (
     </Head>
 
     <article>
-      <h1>{postData.title}</h1>
-      <div>
+      <h1 className="text-3xl leading-tight font-extrabold my-4">{postData.title}</h1>
+      <div className="text-gray-600">
         <Date dateString={postData.date} />
       </div>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

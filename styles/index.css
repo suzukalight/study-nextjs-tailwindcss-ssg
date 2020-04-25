@@ -21,3 +21,19 @@ img {
   max-width: 100%;
   display: block;
 }
+
+article p {
+  margin: 1em 0;
+}
+
+article ul {
+  display: block;
+  list-style-type: disc;
+  margin: 1em 0;
+  padding-left: 2.25em;
+}
+
+article li {
+  display: list-item;
+  text-align: match-parent;
+}

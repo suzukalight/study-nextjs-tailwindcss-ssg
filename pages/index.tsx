@@ -31,11 +31,12 @@ const Home: FC<HomeProps> = ({ allPostsData }) => (
     <section className="text-xl">…</section>
     <section className="text-xl pt-1">
       <h2 className="text-2xl font-bold my-4">Blog</h2>
+
       <ul className="m-0 p-0">
         {allPostsData.map(({ id, date, title }) => (
           <li key={id} className="mb-5">
             <Link href="/posts/[id]" as={`/posts/${id}`}>
-              <a>{title}</a>
+              <a className="text-xl">{title}</a>
             </Link>
             <br />
             <small className="text-gray-600">
@@ -45,11 +46,6 @@ const Home: FC<HomeProps> = ({ allPostsData }) => (
         ))}
       </ul>
     </section>
-
-    <div className="p-4 shadow rounded bg-white">
-      <h1 className="text-purple-500 leading-normal">Next.js</h1>
-      <p className="text-gray-500">with Tailwind CSS</p>
-    </div>
   </Layout>
 );
 
