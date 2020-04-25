@@ -1,5 +1,9 @@
+
+/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
+/* purgecss end ignore */
+
 @tailwind utilities;
 
 * {
@@ -22,9 +26,11 @@ img {
   display: block;
 }
 
+/* purgecss start ignore */
 article p {
   margin: 1em 0;
 }
+/* purgecss end ignore */
 
 article ul {
   display: block;
